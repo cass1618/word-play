@@ -6,8 +6,7 @@ $(document).ready(function() {
 
   let array = [];
   array = sentence.split(" ");
-  $(".output").text(sentence);
-
+  
   let newArray = [];
   array.forEach(function(word) {
     if (word.length >= 3) {
@@ -15,11 +14,10 @@ $(document).ready(function() {
     }
   })
 
-  newArray.reverse()
-  
-  console.log(array);
-  console.log(newArray);
+  newArray.reverse();
 
-    
+  let newSentence = newArray.join(" ");
+
+  $(".output").text(newSentence);    
   });
 });
