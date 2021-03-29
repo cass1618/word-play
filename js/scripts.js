@@ -3,7 +3,22 @@ $(document).ready(function() {
   event.preventDefault();
 
   let sentence = $("#sentence").val();  
-  $(".output").text(sentence)
+
+  let array = [];
+  array = sentence.split(" ");
+  $(".output").text(sentence);
+
+  let newArray = [];
+  array.forEach(function(word) {
+    if (word.length >= 3) {
+      newArray.push(word);
+    }
+  })
+
+  newArray.reverse()
+  
+  console.log(array);
+  console.log(newArray);
 
     
   });
